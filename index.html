@@ -1,224 +1,355 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio of Ana Laura Gonzalez Alvarez, Computer Science student at Miami Dade College.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Portfolio of Ana Laura Gonzalez Alvarez, Computer Science student at Miami Dade College."
+    />
     <title>Ana laura Gonzalez Alvarez | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        /* Spanish is hidden by defect */
-        .lang-es {
-            display: none;
-        }
+      /* Spanish is hidden by defect */
+      .lang-es {
+        display: none;
+      }
 
-        /* Smooth scoll */
-        html {
-            scroll-behavior: smooth;
-        }
+      /* Smooth scoll */
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
-</head>
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:where(.dark, .dark *));
+    </style>
+  </head>
 
-<body class="bg-gray-50 text-gray-900 transition-colors duration-300" id="top">
-    <button onclick="window.scrollTo(0,0)" id="back-to-top"
-        class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition hidden">
-        ↑ Top
+  <body
+    class="bg-gray-50 text-gray-300 dark:bg-black dark:text-orange-50 transition-colors duration-300"
+    id="top"
+  >
+    <button
+      onclick="window.scrollTo(0, 0)"
+      id="back-to-top"
+      class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition hidden"
+    >
+      ↑ Top
     </button>
 
     <header
-        class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-800 px-6 py-4 flex justify-between items-center">
+      class="sticky top-0 z-40 px-6 py-4 flex justify-between items-center backdrop-blur-md border-b bg-white/90 dark:bg-[#020617]/90 border-gray-100 dark:border-slate-900"
+    >
+      <div class="logo-area">
+        <h1 class="text-xl font-bold text-gray-900 dark:text-gray-200">
+          Ana Laura Gonzalez Alvarez
+        </h1>
+        <h2 class="text-sm font-medium text-gray-700 dark:text-gray-400">
+          <span class="lang-en"
+            >Computer Science Student | Miami Dade College</span
+          >
+          <span class="lang-es"
+            >Estudiante de Ciencias de la Computación | Miami Dade College</span
+          >
+        </h2>
+      </div>
 
-        <div class="logo-area">
-            <h1 class="text-xl font-bold text-gray-800">Ana Laura Gonzalez Alvarez</h1>
-            <h2 class="text-sm text-gray-500 font-medium">
-                <span class="lang-en">Computer Science Student | Miami Dade College</span>
-                <span class="lang-es">Estudiante de Ciencias de la Computación | Miami Dade College</span>
-            </h2>
-        </div>
+      <nav class="space-x-6 hidden md:flex text-gray-500 dark:text-gray-400">
+        <a
+          href="#about"
+          class="hover:text-blue-600 transition"
+        >
+          <span class="lang-en">About</span>
+          <span class="lang-es">Sobre Mí</span>
+        </a>
+        <a
+          href="#skills"
+          class="hover:text-blue-600 transition"
+        >
+          <span class="lang-en">Skills</span>
+          <span class="lang-es">Habilidades</span>
+        </a>
+        <a
+          href="#projects"
+          class="hover:text-blue-600 transition"
+        >
+          <span class="lang-en">Projects</span>
+          <span class="lang-es">Proyectos</span>
+        </a>
+        <a
+          href="#contact"
+          class="hover:text-blue-600 transition"
+        >
+          <span class="lang-en">Contact</span>
+          <span class="lang-es">Contacto</span>
+        </a>
+      </nav>
 
-        <nav class="space-x-6 hidden md:flex">
-            <a href="#about" class="text-gray-600 hover:text-blue-600 transition">
-                <span class="lang-en">About</span>
-                <span class="lang-es">Sobre Mí</span>
-            </a>
-            <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">
-                <span class="lang-en">Skills</span><span class="lang-es">Habilidades</span>
-            </a>
-            <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">
-                <span class="lang-en">Projects</span><span class="lang-es">Proyectos</span>
-            </a>
-            <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">
-                <span class="lang-en">Contact</span><span class="lang-es">Contacto</span>
-            </a>
-        </nav>
-
-        <div class="flex items-center space-x-4">
-            <button onclick="toggleLanguage()"
-                class="bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 px-3 py-1 rounded-lg text-sm font-semibold transition border border-gray-300 dark:border-slate-600 dark:text-orange-50">
-                EN / ES
-            </button>
-            <button onclick="toggleTheme()" class="text-xl hover:scale-110 transition">🌙</button>
-        </div>
+      <div class="flex items-center space-x-4">
+        <button
+          onclick="toggleLanguage()"
+          class="px-3 py-1 rounded-lg text-sm font-semibold transition bg-blue-600 hover:bg-blue-700 text-white"
+        >
+          EN / ES
+        </button>
+        <button
+          id="themeToggle"
+          class="text-xl hover:scale-110 transition"
+        >
+          🌙
+        </button>
+      </div>
     </header>
 
     <main class="max-w-5xl mx-auto p-6">
-        <div id="main-view" class="space-y-20">
-            <section id="about" class="pt-10 flex flex-col md:flex-row items-center gap-10">
-                <img src="images/profile-photo.jpeg" alt="Photo of Ana Gonzalez"
-                    class="rounded-2xl shadow-xl w-64 h-64 object-cover border-4 border-white">
-                <div class="space-y-4">
-                    <h2 class="text-3xl font-bold text-blue-700">
-                        <span class="lang-en">About Me</span><span class="lang-es">Sobre Mí</span>
-                    </h2>
-                    <div class="lang-en text-gray-700">
-                        <p>Computer Science student at MDC. Passionate about <strong>Cybersecurity</strong> and
-                            <strong>AI</strong>.
-                        </p>
-                    </div>
-                    <div class="lang-es text-gray-700">
-                        <p>Estudiante de Ciencias de la Computación en MDC. Apasionada por la
-                            <strong>Ciberseguridad</strong> y la <strong>IA</strong>.
-                        </p>
-                    </div>
-                    <button onclick="showView('detailed-view')"
-                        class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition shadow-md">
-                        <span class="lang-en">View Resume</span><span class="lang-es">Ver Resume</span>
-                    </button>
-                </div>
-            </section>
+      <div
+        id="main-view"
+        class="space-y-20"
+      >
+        <section
+          id="about"
+          class="mt-10 flex flex-col md:flex-row items-center gap-10 p-8 rounded-2xl border transition-all duration-300 bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
+        >
+          <img
+            src="images/profile-photo.jpeg"
+            alt="Photo of Ana Gonzalez"
+            class="rounded-2xl shadow-xl w-64 h-64 object-cover border-4 border-white"
+          />
+          <div class="space-y-4">
+            <h2 class="text-3xl font-bold text-blue-700">
+              <span class="lang-en">About Me</span
+              ><span class="lang-es">Sobre Mí</span>
+            </h2>
+            <div class="lang-en text-gray-700 dark:text-gray-500">
+              <p>
+                Computer Science student at MDC. Passionate about
+                <strong>Cybersecurity</strong> and <strong>AI</strong>.
+              </p>
+            </div>
+            <div class="lang-es text-gray-700">
+              <p>
+                Estudiante de Ciencias de la Computación en MDC. Apasionada por
+                la <strong>Ciberseguridad</strong> y la <strong>IA</strong>.
+              </p>
+            </div>
+            <button
+              onclick="showView('detailed-view')"
+              class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition shadow-md"
+            >
+              <span class="lang-en">View Resume</span>
+              <span class="lang-es">Ver Resume</span>
+            </button>
+          </div>
+        </section>
 
-            <section id="skills" class="p-8 rounded-2xl border transition-all duration-300">
-                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
-                    <span class="lang-en">Technical Skills</span><span class="lang-es">Habilidades Técnicas</span>
-                </h2>
-                <ul class="space-y-2">
-                    <li>
-                        <strong class="font-bold">Mathematics:</strong>
-                        <span class="lang-en">Multivariable Calculus, Linear Algebra.</span>
-                        <span class="lang-es">Cálculo Multivariable, Álgebra Lineal.</span>
-                    </li>
-                </ul>
-            </section>
+        <section
+          id="skills"
+          class="p-8 rounded-2xl border transition-all duration-300 bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
+        >
+          <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+            <span class="lang-en">Technical Skills</span>
+            <span class="lang-es">Habilidades Técnicas</span>
+          </h2>
+          <ul class="space-y-2">
+            <li>
+              <span class="font-bold lang-en">Mathematics:</span>
+              <span class="font-bold lang-es">Matemáticas:</span>
+              <span class="lang-en"
+                >Multivariable Calculus, Linear Algebra.</span
+              >
+              <span class="lang-es"
+                >Cálculo Multivariable, Álgebra Lineal.</span
+              >
+            </li>
+          </ul>
+        </section>
 
-            <section id="projects" class="p-8 rounded-2xl border transition-all duration-300">
-                <h2 class="text-2xl font-bold mb-8">
-                    <span class="lang-en">Projects</span><span class="lang-es">Proyectos</span>
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <article class="p-6 rounded-xl border transition-all duration-300 shadow-sm">
-                        <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400">Sharky</h3>
-                        <p class="mt-2 mb-4">Autonomous robot presented at <strong>AGU25</strong>.</p>
-                        <button onclick="showView('sharky-detail')"
-                            class="text-blue-500 font-semibold hover:underline">Learn More →</button>
-                    </article>
-                </div>
-            </section>
+        <section
+          id="projects"
+          class="p-8 rounded-2xl border transition-all duration-300 bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
+        >
+          <h2 class="text-2xl font-bold mb-8">
+            <span class="lang-en">Projects</span
+            ><span class="lang-es">Proyectos</span>
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <article
+              class="p-6 rounded-xl border transition-all duration-300 shadow-sm bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
+            >
+              <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400">
+                Sharky
+              </h3>
+              <p class="mt-2 mb-4">
+                Autonomous robot presented at <strong>AGU25</strong>.
+              </p>
+              <button
+                onclick="showView('sharky-detail')"
+                class="text-blue-500 font-semibold hover:underline"
+              >
+                Learn More →
+              </button>
+            </article>
+          </div>
+        </section>
 
-            <section id="contact" class="pb-20">
-                <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
-                <div id="contact-card" class="p-8 rounded-2xl border transition-all duration-300 shadow-sm">
-                    <p class="mb-6">
-                        <span class="lang-en">I am open to collaboration opportunities...</span>
-                        <span class="lang-es">Estoy abierta a colaborar...</span>
-                    </p>
-                    <ul class="space-y-4">
-                        <li><strong>Email:</strong> <a href="mailto:..."
-                                class="text-blue-600 dark:text-blue-400 ml-2">your-email@example.com</a></li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-
-        <div id="sharky-detail" class="hidden py-10 space-y-6">
-            <button onclick="hideDetails()" class="text-blue-600 font-bold hover:underline">← Back to Projects</button>
-            <h3 class="text-3xl font-bold">Project Sharky - Deep Dive</h3>
-            <p class="text-lg">Details about the hardware and autonomous navigation logic presented at
-                <strong>AGU25</strong>.
+        <section
+          id="contact"
+          class="mb-20 p-8 rounded-2xl border transition-all duration-300 bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
+        >
+          <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
+          <div
+            id="contact-card"
+            class="p-8 rounded-2xl border transition-all duration-300 shadow-sm bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
+          >
+            <p class="mb-6">
+              <span class="lang-en"
+                >I am open to collaboration opportunities...</span
+              >
+              <span class="lang-es">Estoy abierta a colaborar...</span>
             </p>
-            <img src="images/sharky-tech.jpg" alt="Technical view of Sharky"
-                class="rounded-xl shadow-lg max-w-full h-auto">
-        </div>
+            <ul class="space-y-4">
+              <li>
+                <strong>Email:</strong>
+                <a
+                  href="mailto:..."
+                  class="text-blue-600 dark:text-blue-400 ml-2"
+                  >your-email@example.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
 
-        <div id="detailed-view" class="hidden py-10 space-y-6">
-            <button onclick="hideDetails()" class="text-blue-600 font-bold hover:underline">← Go Back</button>
-            <section id="resume" class="bg-white p-10 rounded-2xl shadow-xl">
-                <h3 class="text-3xl font-bold border-b pb-4 mb-6">Technical Resume</h3>
-                <p>Detailed academic background and project highlights will go here.</p>
-            </section>
-        </div>
+      <div
+        id="sharky-detail"
+        class="hidden py-10 space-y-6"
+      >
+        <button
+          onclick="hideDetails()"
+          class="text-blue-600 font-bold hover:underline"
+        >
+          ← Back to Projects
+        </button>
+        <h3 class="text-3xl font-bold">Project Sharky - Deep Dive</h3>
+        <p class="text-lg">
+          Details about the hardware and autonomous navigation logic presented
+          at <strong>AGU25</strong>.
+        </p>
+        <img
+          src="images/sharky-tech.jpg"
+          alt="Technical view of Sharky"
+          class="rounded-xl shadow-lg max-w-full h-auto"
+        />
+      </div>
 
+      <div
+        id="detailed-view"
+        class="hidden py-10 space-y-6"
+      >
+        <button
+          onclick="hideDetails()"
+          class="text-blue-600 font-bold hover:underline"
+        >
+          ← Go Back
+        </button>
+        <section
+          id="resume"
+          class="p-10 rounded-2xl shadow-xl bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
+        >
+          <h3 class="text-3xl font-bold border-b pb-4 mb-6">
+            Technical Resume
+          </h3>
+          <p>
+            Detailed academic background and project highlights will go here.
+          </p>
+        </section>
+      </div>
     </main>
 
     <footer
-        class="bg-white dark:bg-[#020617] py-10 text-center text-gray-400 dark:text-gray-500 border-t border-gray-100 dark:border-slate-900">
-        <p>&copy; 2026 Ana Laura Gonzalez Alvarez</p>
+      class="py-10 text-center border-t bg-white dark:bg-[#020617] text-gray-400 dark:text-gray-500 border-gray-100 dark:border-slate-900"
+    >
+      <p>&copy; 2026 Ana Laura Gonzalez Alvarez</p>
     </footer>
 
     <script>
-        // Change language
-        function toggleLanguage() {
-            const en = document.querySelectorAll('.lang-en');
-            const es = document.querySelectorAll('.lang-es');
-            en.forEach(el => el.style.display = el.style.display === 'none' ? 'inline' : 'none');
-            es.forEach(el => el.style.display = el.style.display === 'block' ? 'none' : 'block');
+      // Change language
+      function toggleLanguage() {
+        const en = document.querySelectorAll('.lang-en');
+        const es = document.querySelectorAll('.lang-es');
+        en.forEach(
+          (el) =>
+            (el.style.display =
+              el.style.display === 'none' ? 'inline' : 'none'),
+        );
+        es.forEach(
+          (el) =>
+            (el.style.display =
+              el.style.display === 'inline' ? 'none' : 'inline'),
+        );
+      }
+
+      // Show detail view
+      function showView(viewId) {
+        document.getElementById('main-view').classList.add('hidden');
+        document.getElementById(viewId).classList.remove('hidden');
+        window.scrollTo(0, 0);
+      }
+
+      // Return to main view
+      function hideDetails() {
+        document.getElementById('main-view').classList.remove('hidden');
+        document.getElementById('sharky-detail').classList.add('hidden');
+        document.getElementById('detailed-view').classList.add('hidden');
+      }
+
+      // Back to Top button (shows when scrolling)
+      window.onscroll = function () {
+        const btn = document.getElementById('back-to-top');
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          btn.classList.remove('hidden');
+        } else {
+          btn.classList.add('hidden');
         }
+      };
 
-        // Show detail view
-        function showView(viewId) {
-            document.getElementById('main-view').classList.add('hidden');
-            document.getElementById(viewId).classList.remove('hidden');
-            window.scrollTo(0, 0);
+      function applyTheme() {
+        document.documentElement.classList.toggle(
+          'dark',
+          localStorage.theme === 'dark' ||
+            (!('theme' in localStorage) &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches),
+        );
+
+        const toggle = document.getElementById('themeToggle');
+        if (localStorage.theme === 'light') {
+          toggle.textContent = '🌙';
+        } else {
+          toggle.textContent = '☀️';
         }
-
-        // Return to main view
-        function hideDetails() {
-            document.getElementById('main-view').classList.remove('hidden');
-            document.getElementById('sharky-detail').classList.add('hidden');
-            document.getElementById('detailed-view').classList.add('hidden');
+      }
+      // Function to toggle theme and save preference
+      function toggleTheme() {
+        if (localStorage.theme === 'light') {
+          localStorage.theme = 'dark';
+        } else {
+          localStorage.theme = 'light';
         }
+        applyTheme();
+      }
 
-        // Back to Top button (shows when scrolling)
-        window.onscroll = function () {
-            const btn = document.getElementById("back-to-top");
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                btn.classList.remove("hidden");
-            } else {
-                btn.classList.add("hidden");
-            }
-        };
-
-        // Dark Mode Placeholder
-        function toggleTheme() {
-            const html = document.documentElement;
-            const body = document.body;
-            const isDark = html.classList.toggle('dark');
-
-            // Seleccionamos todas las áreas que deben comportarse como "tarjetas"
-            const cards = document.querySelectorAll('section, article, #contact-card');
-
-            if (isDark) {
-                body.style.backgroundColor = "#000000"; // Negro puro
-                body.style.color = "#fff7ed";           // Crema suave (orange-50)
-
-                cards.forEach(card => {
-                    card.style.backgroundColor = "#0f172a"; // Slate-900 (Oscuro suave)
-                    card.style.borderColor = "#1e293b";     // Slate-800
-                    card.style.color = "#fff7ed";           // Forzamos crema en la tarjeta
-                });
-            } else {
-                body.style.backgroundColor = "#f9fafb"; // Gris casi blanco (gray-50)
-                body.style.color = "#111827";           // Gris casi negro (gray-900)
-
-                cards.forEach(card => {
-                    card.style.backgroundColor = "#ffffff"; // Blanco puro
-                    card.style.borderColor = "#f3f4f6";     // Gris suave (gray-100)
-                    card.style.color = "#374151";           // Gris texto (gray-700)
-                });
-            }
-        }
+      // Apply theme on page load
+      applyTheme();
+      document
+        .getElementById('themeToggle')
+        .addEventListener('click', toggleTheme);
     </script>
-</body>
-
+  </body>
 </html>
