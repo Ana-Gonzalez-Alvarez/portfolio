@@ -1,30 +1,26 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <meta
-      name="description"
-      content="Portfolio of Ana Laura Gonzalez Alvarez, Computer Science student at Miami Dade College."
-    />
-    <title>Ana laura Gonzalez Alvarez | Portfolio</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-      /* Spanish is hidden by defect */
-      .lang-es {
-        display: none;
-      }
 
-      /* Smooth scoll */
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
-    <style type="text/tailwindcss">
-      @custom-variant dark (&:where(.dark, .dark *));
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of Ana Laura Gonzalez Alvarez, Computer Science student at Miami Dade College." />
+  <title>Ana laura Gonzalez Alvarez | Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    /* Spanish is hidden by defect */
+    .lang-es {
+      display: none;
+    }
+
+    /* Smooth scoll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
     </style>
 </head>
 
@@ -34,288 +30,451 @@
     ↑ Top
   </button>
 
-    <header
-      class="sticky top-0 z-40 px-6 py-4 flex justify-between items-center backdrop-blur-md border-b bg-white/90 dark:bg-[#020617]/90 border-gray-100 dark:border-slate-900"
-    >
-      <div class="logo-area">
-        <h1 class="text-xl font-bold text-gray-900 dark:text-gray-200">
-          Ana Laura Gonzalez Alvarez
-        </h1>
-        <h2 class="text-sm font-medium text-gray-700 dark:text-gray-400">
-          <span class="lang-en"
-            >Computer Science Student | Miami Dade College</span
-          >
-          <span class="lang-es"
-            >Estudiante de Ciencias de la Computación | Miami Dade College</span
-          >
-        </h2>
-      </div>
+  <header
+    class="sticky top-0 z-40 px-6 py-4 flex justify-between items-center backdrop-blur-md border-b bg-white/90 dark:bg-[#020617]/90 border-gray-100 dark:border-slate-900">
+    <div class="logo-area">
+      <h1 class="text-xl font-bold text-gray-900 dark:text-gray-200">
+        Ana Laura Gonzalez Alvarez
+      </h1>
+      <h2 class="text-sm font-medium text-gray-700 dark:text-gray-400">
+        <span class="lang-en">Computer Science Student | Miami Dade College</span>
+        <span class="lang-es">Estudiante de Ciencias de la Computación | Miami Dade College</span>
+      </h2>
+    </div>
 
-      <nav class="space-x-6 hidden md:flex text-gray-500 dark:text-gray-400">
-        <a
-          href="#about"
-          class="hover:text-blue-600 transition"
-        >
-          <span class="lang-en">About</span>
-          <span class="lang-es">Sobre Mí</span>
-        </a>
-        <a
-          href="#skills"
-          class="hover:text-blue-600 transition"
-        >
-          <span class="lang-en">Skills</span>
-          <span class="lang-es">Habilidades</span>
-        </a>
-        <a
-          href="#projects"
-          class="hover:text-blue-600 transition"
-        >
-          <span class="lang-en">Projects</span>
-          <span class="lang-es">Proyectos</span>
-        </a>
-        <a
-          href="#contact"
-          class="hover:text-blue-600 transition"
-        >
-          <span class="lang-en">Contact</span>
-          <span class="lang-es">Contacto</span>
-        </a>
-      </nav>
+    <nav class="space-x-6 hidden md:flex text-gray-500 dark:text-gray-400">
+      <a href="#about" class="hover:text-blue-600 transition">
+        <span class="lang-en">About</span>
+        <span class="lang-es">Sobre Mí</span>
+      </a>
+      <a href="#skills" class="hover:text-blue-600 transition">
+        <span class="lang-en">Skills</span>
+        <span class="lang-es">Habilidades</span>
+      </a>
+      <a href="#projects" class="hover:text-blue-600 transition">
+        <span class="lang-en">Projects</span>
+        <span class="lang-es">Proyectos</span>
+      </a>
+      <a href="#contact" class="hover:text-blue-600 transition">
+        <span class="lang-en">Contact</span>
+        <span class="lang-es">Contacto</span>
+      </a>
+    </nav>
 
-      <div class="flex items-center space-x-4">
-        <button
-          onclick="toggleLanguage()"
-          class="px-3 py-1 rounded-lg text-sm font-semibold transition bg-blue-600 hover:bg-blue-700 text-white"
-        >
-          EN / ES
-        </button>
-        <button
-          id="themeToggle"
-          class="text-xl hover:scale-110 transition"
-        >
-          🌙
-        </button>
-      </div>
-    </header>
+    <div class="flex items-center space-x-4">
+      <button onclick="toggleLanguage()"
+        class="px-3 py-1 rounded-lg text-sm font-semibold transition bg-blue-600 hover:bg-blue-700 text-white">
+        EN / ES
+      </button>
+      <button id="themeToggle" class="text-xl hover:scale-110 transition">
+        🌙
+      </button>
+    </div>
+  </header>
 
-    <main class="max-w-5xl mx-auto p-6">
-      <div
-        id="main-view"
-        class="space-y-20"
-      >
-        <section
-          id="about"
-          class="pt-10 flex flex-col md:flex-row items-center gap-10 p-8 rounded-2xl border transition-all duration-300 bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
-        >
-          <img
-            src="images/profile-photo.jpeg"
-            alt="Photo of Ana Gonzalez"
-            class="rounded-2xl shadow-xl w-64 h-64 object-cover border-4 border-white"
-          />
-          <div class="space-y-4">
-            <h2 class="text-3xl font-bold text-blue-700">
-              <span class="lang-en">Technical Profile</span
-              ><span class="lang-es">Perfil técnico</span>
-            </h2>
-            <div class="dark:text-orange-50">
-              <span class="lang-en">
-                <p>
-                  Ana is a second-year Computer Science student in the Honors
-                  College at Miami Dade College, Padron Campus. Her academic
-                  interests include cybersecurity, robotics, artificial
-                  intelligence, and the development of secure, socially
-                  responsible technologies. She conducts research in
-                  cybersecurity and post-quantum systems under the mentorship of
-                  Dr. Selcuk Uluagac at Florida International University and
-                  leads a sustainability-focused robotics project that connects
-                  autonomous systems with environmental education. She also
-                  supports STEM learning as a mathematics tutor and helps guide
-                  first-year Honors students as a peer mentor.
-                </p>
-                <p>
-                  First-generation immigrant · Tutor and peer mentor · Expanding
-                  access to research and STEM leadership for first-year students
-                </p>
-              </span>
-              <span class="lang-es">
-                <p>
-                  Ana es estudiante de segundo año de Ciencias de la Computación
-                  en el Honors College de Miami Dade College, campus Padron. Sus
-                  intereses académicos incluyen ciberseguridad, robótica,
-                  inteligencia artificial y el desarrollo de tecnologías seguras
-                  y socialmente responsables. Realiza investigación en
-                  ciberseguridad y sistemas post-cuánticos bajo la mentoría del
-                  Dr. Selcuk Uluagac en Florida International University y
-                  lidera un proyecto de robótica enfocado en sostenibilidad que
-                  conecta sistemas autónomos con educación ambiental. También
-                  apoya el aprendizaje en STEM como tutora de matemáticas y
-                  orienta a estudiantes de primer año del Honors College como
-                  mentora.
-                </p>
-                <p>
-                  Inmigrante de primera generación · Tutora y mentora ·
-                  Promoviendo el acceso temprano a la investigación y al
-                  liderazgo en STEM
-                </p>
-              </span>
-            </div>
-            <button
-              onclick="window.open('docs/Resume_Ana_Gonzalez.pdf', '_blank')"
-              class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition shadow-md"
-            >
-              <span class="lang-en">View Resume</span>
-              <span class="lang-es">Ver Resume</span>
-            </button>
-          </div>
-        </section>
-
-        <section
-          id="skills"
-          class="p-8 rounded-2xl border transition-all duration-300 bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
-        >
-          <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
-            <span class="lang-en">Technical Skills</span>
-            <span class="lang-es">Habilidades Técnicas</span>
+  <main class="max-w-5xl mx-auto p-6">
+    <div id="main-view" class="space-y-20">
+      <section id="about"
+        class="pt-10 flex flex-col md:flex-row items-center gap-10 p-8 rounded-2xl border transition-all duration-300 bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50">
+        <img src="images/profile-photo.jpeg" alt="Photo of Ana Gonzalez"
+          class="rounded-2xl shadow-xl w-64 h-64 object-cover border-4 border-white" />
+        <div class="space-y-4">
+          <h2 class="text-3xl font-bold text-blue-700">
+            <span class="lang-en">Technical profile</span><span class="lang-es">Perfil técnico</span>
           </h2>
-          <ul class="space-y-2">
-            <li>
-              <span class="font-bold lang-en">Mathematics:</span>
-              <span class="font-bold lang-es">Matemáticas:</span>
-              <span class="lang-en"
-                >Multivariable Calculus, Linear Algebra.</span
-              >
-              <span class="lang-es"
-                >Cálculo Multivariable, Álgebra Lineal.</span
-              >
-            </li>
-          </ul>
-        </section>
+          <div class="dark:text-orange-50">
+            <span class="lang-en space-y-4">
+              <p>
+                I am a Computer Science Honors student at Miami Dade College (Padron Campus) with a focus on
+                cybersecurity and systems security. My academic interests include post-quantum cryptography, secure
+                system design, and the performance tradeoffs involved in implementing cryptographic mechanisms in real
+                environments.
 
-        <section
-          id="projects"
-          class="p-8 rounded-2xl border transition-all duration-300 bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
-        >
-          <h2 class="text-2xl font-bold mb-8">
-            <span class="lang-en">Projects</span
-            ><span class="lang-es">Proyectos</span>
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <article
-              class="p-6 rounded-xl border transition-all duration-300 shadow-sm bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
-            >
-              <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400">
-                Sharky
-              </h3>
-              <p class="mt-2 mb-4">
-                Autonomous robot presented at <strong>AGU25</strong>.
+                I previously contributed to cybersecurity research under the mentorship of Dr. Selcuk Uluagac at Florida
+                International University. In that role, I supported comparative analysis between post-quantum and
+                traditional cryptographic systems, participating in technical evaluation and documentation of results.
+                This work strengthened my interest in the intersection of mathematical theory, computational complexity,
+                and secure implementation.
+
+                In parallel, I participated in the development of an autonomous robotics project presented at AGU 2025,
+                focused on sustainability and technical outreach. I also served in academic support and student
+                leadership roles, reinforcing my commitment to technical rigor, structured problem solving, and
+                collaborative environments.
+
+                I am currently focused on deepening my foundation in secure systems and preparing for advanced study in
+                cybersecurity.
               </p>
-              <button
-                onclick="showView('sharky-detail')"
-                class="text-blue-500 font-semibold hover:underline"
-              >
-                Learn More →
+              <p>
+                First-generation immigrant · Tutor and peer mentor · Expanding
+                access to research and STEM leadership for first-year students
+              </p>
+            </span>
+            <span class="lang-es space-y-4">
+              <p>
+                Soy estudiante de Ciencias de la Computación en el Honors College de Miami Dade College (campus Padron),
+                con enfoque en ciberseguridad y seguridad de sistemas. Mi interés académico se orienta hacia la
+                criptografía post-cuántica, el diseño de sistemas seguros y el análisis de cómo las decisiones teóricas
+                en seguridad impactan el rendimiento y la viabilidad de los sistemas en la práctica.
+
+                Durante mi experiencia en investigación en ciberseguridad bajo la mentoría del Dr. Selcuk Uluagac en
+                Florida International University, colaboré en la evaluación comparativa de esquemas criptográficos
+                tradicionales y post-cuánticos, participando en el análisis técnico y la documentación de resultados.
+                Este trabajo consolidó mi interés por la relación entre teoría matemática, complejidad computacional e
+                implementación segura.
+
+                De manera paralela, formé parte del desarrollo de un proyecto de robótica autónoma presentado en AGU
+                2025, con un enfoque en sostenibilidad y divulgación técnica. También asumí responsabilidades en tutoría
+                académica y liderazgo estudiantil, fortaleciendo mi capacidad de trabajo colaborativo y mi compromiso
+                con el rigor técnico.
+
+                Actualmente, mi objetivo es continuar desarrollando profundidad técnica en sistemas seguros y avanzar
+                hacia estudios de nivel superior en el área de ciberseguridad.
+              </p>
+              <p>
+                Inmigrante de primera generación · Tutora y mentora ·
+                Promoviendo el acceso temprano a la investigación y al
+                liderazgo en STEM
+              </p>
+            </span>
+          </div>
+          <button onclick="window.open('docs/Resume_Ana_Gonzalez.pdf', '_blank')"
+            class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition shadow-md">
+            <span class="lang-en">View Resume</span>
+            <span class="lang-es">Ver Resume</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="skills"
+        class="p-8 rounded-2xl border transition-all duration-300 bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50">
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+          <span class="lang-en">Skills & Foundations</span>
+          <span class="lang-es">Habilidades y Bases Técnicas</span>
+        </h2>
+        <ul class="space-y-2">
+          <li>
+            <span class="font-bold lang-en">Programming:</span>
+            <span class="font-bold lang-es">Programación:</span>
+            <span class="lang-en">Python, C/C++, JavaScript (HTML/CSS), Git version control.</span>
+            <span class="lang-es">Python, C/C++, JavaScript (HTML/CSS), control de versiones con Git.</span>
+          </li>
+          <li>
+            <span class="font-bold lang-en">Security & Systems:</span>
+            <span class="font-bold lang-es">Seguridad y Sistemas:</span>
+            <span class="lang-en">Post-quantum cryptography (comparative analysis), secure software principles,
+              systems-level performance considerations.</span>
+            <span class="lang-es">Criptografía post-cuántica (análisis comparativo), principios de software seguro,
+              consideraciones de rendimiento a nivel de sistemas.</span>
+          </li>
+          <li>
+            <span class="font-bold lang-en">Technical Tools:</span>
+            <span class="font-bold lang-es">Herramientas Técnicas:</span>
+            <span class="lang-en">Linux fundamentals, command-line workflows, debugging, structured technical
+              documentation.</span>
+            <span class="lang-es">Fundamentos de Linux, trabajo en línea de comandos, depuración, documentación técnica
+              estructurada.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects"
+        class="p-8 rounded-2xl border transition-all duration-300 bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50">
+        <header class="mb-8 space-y-2">
+          <h2 class="text-2xl font-bold">
+            <span class="lang-en">Featured Work</span>
+            <span class="lang-es">Proyectos Destacados</span>
+          </h2>
+
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- ===================== -->
+          <!-- Post-Quantum Project  -->
+          <!-- ===================== -->
+          <article
+            class="h-full flex flex-col justify-between p-6 rounded-xl border shadow-sm transition-all duration-300 bg-white border-gray-100 dark:bg-slate-950 dark:border-slate-800">
+            <div>
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400">
+                    <span class="lang-en">Post-Quantum Cryptography Benchmarking</span>
+                    <span class="lang-es">Benchmarking de Criptografía Post-Cuántica</span>
+                  </h3>
+
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    <span class="lang-en">
+                      Comparative performance analysis between post-quantum and traditional cryptographic schemes in
+                      controlled environments.
+                    </span>
+                    <span class="lang-es">
+                      Análisis comparativo de rendimiento entre esquemas criptográficos post-cuánticos y tradicionales
+                      en entornos controlados.
+                    </span>
+                  </p>
+                </div>
+
+                <span class="shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold
+                   bg-blue-50 text-blue-700 dark:bg-blue-950/50 dark:text-blue-200">
+                  <span class="lang-en">Research</span>
+                  <span class="lang-es">Investigación</span>
+                </span>
+              </div>
+
+              <ul class="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                <li class="flex gap-2">
+                  <span class="mt-[2px] text-blue-600 dark:text-blue-400">•</span>
+                  <span class="lang-en">
+                    Evaluated runtime and resource tradeoffs under structured configurations.
+                  </span>
+                  <span class="lang-es">
+                    Evalué tiempos de ejecución y uso de recursos bajo configuraciones estructuradas.
+                  </span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[2px] text-blue-600 dark:text-blue-400">•</span>
+                  <span class="lang-en">
+                    Supported technical documentation and interpretation of results.
+                  </span>
+                  <span class="lang-es">
+                    Apoyé la documentación técnica e interpretación de resultados.
+                  </span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[2px] text-blue-600 dark:text-blue-400">•</span>
+                  <span class="lang-en">
+                    Connected mathematical security assumptions with measurable system behavior.
+                  </span>
+                  <span class="lang-es">
+                    Conecté supuestos de seguridad matemática con comportamiento medible en sistemas.
+                  </span>
+                </li>
+              </ul>
+
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span
+                  class="rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700 dark:bg-slate-800 dark:text-gray-200">Cryptography</span>
+                <span
+                  class="rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700 dark:bg-slate-800 dark:text-gray-200">Performance
+                  Analysis</span>
+                <span
+                  class="rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700 dark:bg-slate-800 dark:text-gray-200">Documentation</span>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <a href="#" class="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold
+                 bg-blue-600 text-white hover:bg-blue-700 transition">
+                <span class="lang-en">Read Summary</span>
+                <span class="lang-es">Ver Resumen</span>
+                <span class="ml-2">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ===================== -->
+          <!-- Sharky Project        -->
+          <!-- ===================== -->
+          <article
+            class="h-full flex flex-col justify-between p-6 rounded-xl border shadow-sm transition-all duration-300 bg-white border-gray-100 dark:bg-slate-950 dark:border-slate-800">
+            <div>
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400">
+                    Sharky
+                  </h3>
+
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    <span class="lang-en">
+                      Autonomous sustainability-focused outreach robot presented at AGU 2025, integrating hardware
+                      systems with interactive educational demonstrations.
+                    </span>
+                    <span class="lang-es">
+                      Robot autónomo orientado a sostenibilidad presentado en AGU 2025, que integró sistemas de hardware
+                      con demostraciones educativas interactivas.
+                    </span>
+                  </p>
+                </div>
+
+                <span class="shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold
+                   bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-200">
+                  <span class="lang-en">Robotics</span>
+                  <span class="lang-es">Robótica</span>
+                </span>
+              </div>
+
+              <ul class="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                <li class="flex gap-2">
+                  <span class="mt-[2px] text-blue-600 dark:text-blue-400">•</span>
+                  <span class="lang-en">
+                    Participated in hardware integration, sensor configuration, and structural assembly.
+                  </span>
+                  <span class="lang-es">
+                    Participé en integración de hardware, configuración de sensores y ensamblaje estructural.
+                  </span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[2px] text-blue-600 dark:text-blue-400">•</span>
+                  <span class="lang-en">
+                    Contributed to behavior logic and system testing for live demonstrations.
+                  </span>
+                  <span class="lang-es">
+                    Contribuí a la lógica de comportamiento y pruebas del sistema para demostraciones en vivo.
+                  </span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[2px] text-blue-600 dark:text-blue-400">•</span>
+                  <span class="lang-en">
+                    Integrated engineering development with technical outreach and public engagement.
+                  </span>
+                  <span class="lang-es">
+                    Integré desarrollo de ingeniería con divulgación técnica y vinculación pública.
+                  </span>
+                </li>
+              </ul>
+
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span
+                  class="rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700 dark:bg-slate-800 dark:text-gray-200">Embedded
+                  Systems</span>
+                <span
+                  class="rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700 dark:bg-slate-800 dark:text-gray-200">Sensors</span>
+                <span
+                  class="rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700 dark:bg-slate-800 dark:text-gray-200">Autonomous
+                  Logic</span>
+                <span
+                  class="rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700 dark:bg-slate-800 dark:text-gray-200">STEM
+                  Outreach</span>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <button onclick="showView('sharky-detail')" class="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold
+                 bg-blue-600 text-white hover:bg-blue-700 transition">
+                <span class="lang-en">Learn More</span>
+                <span class="lang-es">Ver Más</span>
+                <span class="ml-2">→</span>
               </button>
-            </article>
-          </div>
-        </section>
+            </div>
+          </article>
 
-        <section
-          id="contact"
-          class="mb-20 p-8 rounded-2xl border transition-all duration-300 bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
-        >
-          <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
-          <div
-            id="contact-card"
-            class="p-8 rounded-2xl border transition-all duration-300 shadow-sm bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
-          >
-            <p class="mb-6">
-              <span class="lang-en"
-                >I am open to collaboration opportunities...</span
-              >
-              <span class="lang-es">Estoy abierta a colaborar...</span>
-            </p>
-            <ul class="space-y-4">
-              <li>
-                <strong>Email:</strong>
-                <a
-                  href="mailto:agalvarez23332@gmail.com"
-                  class="text-blue-600 dark:text-blue-400 ml-2"
-                >
-                  agalvarez23332@gmail.com
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div
-        id="sharky-detail"
-        class="hidden py-10 space-y-6"
-      >
-        <button
-          onclick="hideDetails()"
-          class="text-blue-600 font-bold hover:underline"
-        >
-          ← Back to Projects
-        </button>
-        <h3 class="text-3xl font-bold">Project Sharky - Deep Dive</h3>
-        <p class="text-lg">
-          Details about the hardware and autonomous navigation logic presented
-          at <strong>AGU25</strong>.
+      <section id="contact"
+        class="mb-20 p-8 rounded-2xl border transition-all duration-300 bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50">
+        <h2 class="text-2xl font-bold mb-3">
+          <span class="lang-en">Connect & Collaborate</span>
+          <span class="lang-es">Contacto y Colaboración</span>
+        </h2>
+
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl">
+          <span class="lang-en">
+            I am open to research collaborations, security-focused opportunities, and technical discussions related to
+            systems and cryptography. The best way to reach me is by email.
+          </span>
+          <span class="lang-es">
+            Estoy abierta a colaboraciones de investigación, oportunidades relacionadas con seguridad y conversaciones
+            técnicas sobre sistemas y criptografía. El medio principal de contacto es el correo electrónico.
+          </span>
         </p>
-        <img
-          src="images/sharky-tech.jpg"
-          alt="Technical view of Sharky"
-          class="rounded-xl shadow-lg max-w-full h-auto"
-        />
-      </div>
 
-      <div
-        id="detailed-view"
-        class="hidden py-10 space-y-6"
-      >
-        <button
-          onclick="hideDetails()"
-          class="text-blue-600 font-bold hover:underline"
-        >
-          ← Go Back
-        </button>
-        <section
-          id="resume"
-          class="p-10 rounded-2xl shadow-xl bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50"
-        >
-          <h3 class="text-3xl font-bold border-b pb-4 mb-6">
-            Technical Resume
-          </h3>
-          <p>
-            Detailed academic background and project highlights will go here.
+        <!-- Links row -->
+        <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+          <!-- Email -->
+          <a href="mailto:ana.gonzalez168@mymdc.net"
+            class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+            <span aria-hidden="true">✉️</span>
+            <span class="lang-en">Email</span>
+            <span class="lang-es">Correo</span>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/Ana-Gonzalez-Alvarez" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+            <span aria-hidden="true">↗</span>
+            GitHub
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/ana-gonzalez-03b17b2b4/" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+            <span aria-hidden="true">↗</span>
+            LinkedIn
+          </a>
+
+          <p class="mt-6 text-xs text-gray-500 dark:text-gray-500">
+            <span class="lang-en">Currently based in Miami, FL.</span>
+            <span class="lang-es">Ubicada actualmente en Miami, FL.</span>
           </p>
-        </section>
-      </div>
-    </main>
+      </section>
+
+      <script>
+        async function copyEmail(email) {
+          try {
+            await navigator.clipboard.writeText(email);
+            alert('Email copied!');
+          } catch (e) {
+            const t = document.createElement('textarea');
+            t.value = email;
+            document.body.appendChild(t);
+            t.select();
+            document.execCommand('copy');
+            document.body.removeChild(t);
+            alert('Email copied!');
+          }
+        }
+      </script>
+    </div>
+
+    <div id="sharky-detail" class="hidden py-10 space-y-6">
+      <button onclick="hideDetails()" class="text-blue-600 font-bold hover:underline">
+        ← Back to Projects
+      </button>
+      <h3 class="text-3xl font-bold">Project Sharky - Deep Dive</h3>
+      <p class="text-lg">
+        Details about the hardware and autonomous navigation logic presented
+        at <strong>AGU25</strong>.
+      </p>
+      <img src="images/sharky-tech.jpg" alt="Technical view of Sharky" class="rounded-xl shadow-lg max-w-full h-auto" />
+    </div>
+
+    <div id="detailed-view" class="hidden py-10 space-y-6">
+      <button onclick="hideDetails()" class="text-blue-600 font-bold hover:underline">
+        ← Go Back
+      </button>
+      <section id="resume"
+        class="p-10 rounded-2xl shadow-xl bg-white border-gray-100 text-gray-700 dark:bg-slate-900 dark:border-slate-800 dark:text-orange-50">
+        <h3 class="text-3xl font-bold border-b pb-4 mb-6">
+          Technical Resume
+        </h3>
+        <p>
+          Detailed academic background and project highlights will go here.
+        </p>
+      </section>
+    </div>
+  </main>
 
   <footer
     class="py-10 text-center border-t bg-white dark:bg-[#020617] text-gray-400 dark:text-gray-500 border-gray-100 dark:border-slate-900">
     <p>&copy; 2026 Ana Laura Gonzalez Alvarez</p>
   </footer>
 
-    <script>
-      // Change language
-      function toggleLanguage() {
-        const en = document.querySelectorAll('.lang-en');
-        const es = document.querySelectorAll('.lang-es');
-        en.forEach(
-          (el) =>
-            (el.style.display =
-              el.style.display === 'none' ? 'inline' : 'none'),
-        );
-        es.forEach(
-          (el) =>
-            (el.style.display =
-              el.style.display === 'inline' ? 'none' : 'inline'),
-        );
-      }
+  <script>
+    // Change language
+    function toggleLanguage() {
+      const en = document.querySelectorAll('.lang-en');
+      const es = document.querySelectorAll('.lang-es');
+      en.forEach(
+        (el) =>
+        (el.style.display =
+          el.style.display === 'none' ? 'inline' : 'none'),
+      );
+      es.forEach(
+        (el) =>
+        (el.style.display =
+          el.style.display === 'inline' ? 'none' : 'inline'),
+      );
+    }
 
     // Show detail view
     function showView(viewId) {
