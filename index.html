@@ -15,9 +15,14 @@
     />
     <title>Ana laura Gonzalez Alvarez | Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <style type="text/tailwindcss">
       @custom-variant dark (&:where(.dark, .dark *));
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
   </head>
 
   <body
@@ -179,7 +184,7 @@
               </span>
             </div>
             <button
-              onclick=""
+              onclick="goToSection('community-detail')"
               class="bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition shadow-md cursor-pointer"
             >
               <span class="lang-en">Community Engagement</span>
@@ -496,9 +501,15 @@
         >
           <button
             onclick="goBack('sharky-detail')"
-            class="text-blue-600 font-bold hover:underline cursor-pointer"
+            class="text-blue-600 font-bold hover:underline cursor-pointer lang-en"
           >
             ← Back to Projects
+          </button>
+          <button
+            onclick="goBack('sharky-detail')"
+            class="text-blue-600 font-bold hover:underline cursor-pointer lang-es hidden"
+          >
+            ← Regresar a Proyectos
           </button>
           <h3 class="text-3xl font-bold">Project Sharky - Deep Dive</h3>
           <p class="text-lg">
@@ -519,9 +530,15 @@
         >
           <button
             onclick="goBack('leadership-detail')"
-            class="text-blue-600 font-bold hover:underline cursor-pointer"
+            class="text-blue-600 font-bold hover:underline cursor-pointer lang-en"
           >
             ← Back
+          </button>
+          <button
+            onclick="goBack('leadership-detail')"
+            class="text-blue-600 font-bold hover:underline cursor-pointer lang-spanish hidden"
+          >
+            ← Atrás
           </button>
           <div class="pt-10 md:flex gap-4">
             <div class="relative h-full">
@@ -542,7 +559,7 @@
             >
               <div class="lang-en space-y-4">
                 <p
-                  class="first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:text-blue-900 first-letter:font-bold"
+                  class="first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:text-blue-600 first-letter:font-bold"
                 >
                   As Secretary of Sigma Zeta, the STEM Honor Society at Miami
                   Dade College, I contributed to the organizational structure
@@ -566,7 +583,7 @@
               </div>
               <div class="lang-es space-y-1 hidden">
                 <p
-                  class="first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:text-blue-900 first-letter:font-bold"
+                  class="first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:text-blue-600 first-letter:font-bold"
                 >
                   Como Secretaria de Sigma Zeta, la sociedad honorífica STEM de
                   Miami Dade College, participé activamente en la estructura
@@ -593,7 +610,7 @@
             </div>
           </div>
           <div
-            class="text-justify text-gray-700 dark:text-orange-50 first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:text-blue-900 first-letter:font-bold"
+            class="text-justify text-gray-700 dark:text-orange-50 first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:text-blue-600 first-letter:font-bold"
           >
             <p class="mt-4 lang-en">
               Serving as a mathematics tutor at the STEM Success Center allowed
@@ -613,6 +630,144 @@
               la importancia de bases matemáticas sólidas como fundamento para
               el crecimiento técnico en áreas STEM.
             </p>
+          </div>
+        </section>
+
+        <section
+          id="community-detail"
+          class="hidden"
+        >
+          <button
+            onclick="goBack('community-detail')"
+            class="text-blue-600 font-bold hover:underline cursor-pointer lang-en"
+          >
+            ← Back
+          </button>
+          <button
+            onclick="goBack('community-detail')"
+            class="text-blue-600 font-bold hover:underline cursor-pointer lang-es hidden"
+          >
+            ← Atrás
+          </button>
+          <div
+            class="splide h-200"
+            id="academic"
+            aria-label="Carousel with academic images"
+          >
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <img
+                    src="images/book_fair.jpeg"
+                    alt="Book Fair"
+                    class="size-full object-scale-down h-200"
+                  />
+                </li>
+                <li class="splide__slide">
+                  <img
+                    src="images/film_festival.jpeg"
+                    alt="Film Festival"
+                    class="size-full object-scale-down h-200"
+                  />
+                </li>
+                <li class="splide__slide">
+                  <img
+                    src="images/SLINSHOT_VOLUNTEER_1.jpeg"
+                    alt="Slingshot Marketplace Volunteer Selfi"
+                    class="size-full object-scale-down h-200"
+                  />
+                </li>
+                <li class="splide__slide">
+                  <img
+                    src="images/slingshot_2.jpeg"
+                    alt="Slingshot Marketplace Volunteer"
+                    class="size-full object-scale-down h-200"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-justify w-auto text-gray-700 dark:text-orange-50">
+            <div class="lang-en">
+              <p
+                class="first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:text-blue-600 first-letter:font-bold"
+              >
+                Beyond formal academic roles, I have actively supported the
+                local organization of nationally recognized cultural and
+                educational initiatives. I contributed to the Book Fair, Film
+                Festival, and Slingshot Marketplace — large-scale events that
+                promote literacy, cinema, student entrepreneurship, and public
+                intellectual engagement.
+              </p>
+              <p>
+                Participating in these initiatives required structured
+                coordination, reliability, and collaboration across diverse
+                teams. Contributing to nationally recognized programs at the
+                local level strengthened my understanding of how cultural and
+                educational platforms operate within broader institutional
+                frameworks.
+              </p>
+            </div>
+            <div class="lang-es hidden">
+              <p
+                class="first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:text-blue-600 first-letter:font-bold"
+              >
+                Más allá de mis roles académicos formales, he participado
+                activamente en la organización de iniciativas culturales y
+                educativas de alcance nacional. Colaboré en la Feria del Libro,
+                el Festival de Cine y el Slingshot Marketplace, eventos de gran
+                escala que promueven la lectura, el cine, el emprendimiento
+                estudiantil y el intercambio intelectual.
+              </p>
+              <p>
+                La participación en estas iniciativas implicó coordinación
+                estructurada, responsabilidad y trabajo colaborativo con equipos
+                diversos. Contribuir a programas de alcance nacional fortaleció
+                mi comprensión sobre el funcionamiento de plataformas culturales
+                y educativas dentro de marcos organizativos más amplios.
+              </p>
+            </div>
+            <div class="mt-2 flex gap-4">
+              <img
+                src="images/nasa_space_apps.jpeg"
+                alt="NASA Space Apps Event picture"
+                class="w-1/8 h-auto"
+                id="nasa-logo"
+              />
+              <div class="lang-en">
+                <p>
+                  I also supported the organization of the NASA Space Apps
+                  Challenge, contributing to logistics coordination,
+                  communication between participants and mentors, and overall
+                  operational support. Working within an internationally
+                  connected, mission-driven hackathon environment reinforced my
+                  appreciation for collaborative problem-solving in dynamic,
+                  real-world contexts.
+                </p>
+                <p>
+                  Collectively, these experiences reflect a sustained commitment
+                  to supporting educational and cultural ecosystems that extend
+                  beyond the classroom while remaining grounded in community
+                  engagement.
+                </p>
+              </div>
+              <div class="lang-es hidden">
+                <p>
+                  Asimismo, apoyé la organización del NASA Space Apps Challenge,
+                  participando en la coordinación logística, la comunicación
+                  entre equipos y mentores, y el soporte operativo general del
+                  evento. Formar parte de un hackatón internacional orientado a
+                  misiones reales reforzó mi valoración del trabajo colaborativo
+                  en contextos dinámicos y con impacto más amplio.
+                </p>
+                <p>
+                  En conjunto, estas experiencias reflejan un compromiso
+                  sostenido con el fortalecimiento de ecosistemas educativos y
+                  culturales que trascienden el aula, manteniendo una conexión
+                  directa con la comunidad.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -729,7 +884,9 @@
           en.forEach((el) => el.classList.add('hidden'));
         }
       }
+    </script>
 
+    <script>
       // Go to a specific section or back from it
       function goToSection(name) {
         document.querySelectorAll('section').forEach((el) => {
@@ -755,7 +912,9 @@
         });
         window.scrollTo(0, 0);
       }
+    </script>
 
+    <script>
       // Back to Top button (shows when scrolling)
       window.onscroll = function () {
         const btn = document.getElementById('back-to-top');
@@ -768,7 +927,9 @@
           btn.classList.add('hidden');
         }
       };
+    </script>
 
+    <script>
       function applyTheme() {
         document.documentElement.classList.toggle(
           'dark',
@@ -799,6 +960,11 @@
       document
         .getElementById('themeToggle')
         .addEventListener('click', toggleTheme);
+    </script>
+
+    <script>
+      // carousel
+      new Splide('#academic').mount();
     </script>
   </body>
 </html>
